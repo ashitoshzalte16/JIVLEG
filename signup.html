@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Sign Up - JIVLEG MEN'S VARE</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #111, #c5a880);
+    }
+    .container {
+      background: #fff;
+      width: 400px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      position: relative;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #111;
+    }
+    .input-box {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    .input-box label {
+      font-size: 14px;
+      color: #444;
+    }
+    .input-box input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: 0.3s;
+    }
+    .input-box input:focus {
+      border-color: #c5a880;
+    }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #111;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #c5a880;
+      color: #111;
+    }
+    .toggle-text {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+    .toggle-text span {
+      color: #c5a880;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <form id="loginForm">
+      <h2>Login</h2>
+      <div class="input-box">
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-box">
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <p class="toggle-text">Don't have an account? <span onclick="showSignUp()">Sign Up</span></p>
+    </form>
+
+    <!-- Sign Up Form -->
+    <form id="signupForm" class="hidden">
+      <h2>Sign Up</h2>
+      <div class="input-box">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+      </div>
+      <div class="input-box">
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-box">
+        <label>Password</label>
+        <input type="password" placeholder="Create password" required>
+      </div>
+      <div class="input-box">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm password" required>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+      <p class="toggle-text">Already have an account? <span onclick="showLogin()">Login</span></p>
+    </form>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    const signupForm = document.getElementById("signupForm");
+
+    function showSignUp() {
+      loginForm.classList.add("hidden");
+      signupForm.classList.remove("hidden");
+    }
+
+    function showLogin() {
+      signupForm.classList.add("hidden");
+      loginForm.classList.remove("hidden");
+    }
+
+    // Example form submit handling
+    loginForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Login Successful!");
+    });
+
+    signupForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Account Created Successfully!");
+    });
+  </script>
+</body>
+</html>

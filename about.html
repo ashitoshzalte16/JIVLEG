@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JIVLEG MEN'S VARE | About Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    body {
+      background: #f8f8f8;
+      color: #222;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #111;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #c5a880;
+    }
+
+    .about-section {
+      padding: 70px 12%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+    }
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    .about-text h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 15px;
+    }
+    .about-image {
+      flex: 1;
+      min-width: 300px;
+    }
+    .about-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    }
+
+    .mission-section {
+      padding: 60px 12%;
+      text-align: center;
+      background: #111;
+      color: white;
+    }
+    .mission-section h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .mission-section p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #ddd;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JIVLEG MEN'S VARE</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>Founded with the vision to redefine men’s fashion, <strong>JIVLEG MEN'S VARE</strong> blends timeless elegance with contemporary style. Every piece is thoughtfully designed and crafted to embody sophistication, comfort, and durability.</p>
+      <p>We believe in empowering men with clothing that not only enhances their personality but also reflects their individuality. Our premium fabrics and attention to detail set us apart as a modern luxury brand.</p>
+    </div>
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1490111718993-d98654ce6cf7?auto=format&fit=crop&w=1600&q=80" alt="About JIVLEG MEN'S VARE">
+    </div>
+  </section>
+
+  <section class="mission-section">
+    <h3>Our Mission</h3>
+    <p>To inspire confidence and style in every man by delivering premium quality menswear that bridges the gap between luxury and everyday wear. We are dedicated to creating sustainable, stylish, and lasting fashion that speaks to the modern gentleman.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 JIVLEG MEN'S VARE. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Simple fade-in effect for About Page sections
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < triggerBottom) {
+          section.style.opacity = 1;
+          section.style.transition = 'opacity 1s ease-in';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
